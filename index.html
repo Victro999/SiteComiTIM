@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <title>ComiTim</title>
+        <link rel="icon" type="image/x-icon" href="img/logo_comitim.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <button id="up-arrow" onclick="scrollToTop()" style="display: none">
+            <span class="material-icons">arrow_upward</span>
+        </button>
+        <header>
+            <nav class="darkblue">
+                <img
+                    src="img/logo_comitim.svg"
+                    alt="Logo TIM"
+                    onclick="switchPage(0)"
+                />
+                <ul>
+                    <li>
+                        <button onclick="switchPage(1), switchContent(0, 0)">
+                            Nos projets
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchPage(2), switchContent(1, 0)">
+                            Nos activités
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchPage(3)">Nos profs</button>
+                    </li>
+                    <li>
+                        <button onclick="switchPage(4)">L'horaire</button>
+                    </li>
+                </ul>
+                <a href="https://discord.gg/AEQnR9SSud" class="discord">
+                    <img src="img/discord.svg" alt="Discord" />
+                    <p>Rejoignez le Discord</p>
+                </a>
+            </nav>
+            <nav class="secondary orange">
+                <ul class="hide" id="liste-projets">
+                    <li>
+                        <button onclick="switchContent(0, 1)">3D</button>
+                    </li>
+                    <li>
+                        <button onclick="switchContent(0, 2)">Animation</button>
+                    </li>
+                    <li>
+                        <button onclick="switchContent(0, 3)">Jeux</button>
+                    </li>
+                </ul>
+                <ul class="hide" id="liste-activites">
+                    <li>
+                        <button onclick="switchContent(1, 1)">
+                            MédiaTober
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchContent(1, 2)">GameJam</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main">
+            <div id="accueil">
+                <h1>Accueil</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Officiis, sed sapiente architecto, repellat nemo dolorum qui
+                    quasi, perspiciatis veritatis molestiae error consectetur
+                    laboriosam maiores et natus odio quaerat adipisci accusamus?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Iure autem quisquam id atque blanditiis! Explicabo, quis
+                    tempore numquam consequuntur molestias repudiandae fugit
+                    inventore alias possimus, eum quo repellendus harum cumque?
+                </p>
+            </div>
+            <div id="projets">
+                <div>
+                    <h1>Nos projets</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                </div>
+                <div>
+                    <h1>3D</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe
+                            title="Cube"
+                            frameborder="0"
+                            allowfullscreen
+                            mozallowfullscreen="true"
+                            webkitallowfullscreen="true"
+                            allow="autoplay; fullscreen; xr-spatial-tracking"
+                            xr-spatial-tracking
+                            execution-while-out-of-viewport
+                            execution-while-not-rendered
+                            web-share
+                            src="https://sketchfab.com/models/1ba8a8fa3e1f4f669fdf2c8ea96bef0f/embed"
+                        >
+                        </iframe>
+                    </div>
+                </div>
+                <div>
+                    <h1>Animation</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                    <img src="animations/Mine.gif" alt="Mine" class="anim">
+                </div>
+                <div>
+                    <h1>Jeux</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                    <div class="jeu">
+                        <h3>CommunityBalls</h3>
+                        <div id="CommunityBalls">
+                            <iframe src="" frameborder="0"></iframe>
+                            <button onclick="gameBtn('CommunityBalls')">
+                                <span class="material-icons">play_arrow</span>
+                            </button>
+                            <img
+                                src="img/test.png"
+                                alt=""
+                                onclick="gameBtn('CommunityBalls')"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="activites">
+                <div>
+                    <h1>Nos activités</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                </div>
+                <div>
+                    <h1>MédiaTober</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                </div>
+                <div>
+                    <h1>GameJam</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Officiis, sed sapiente architecto, repellat nemo
+                        dolorum qui quasi, perspiciatis veritatis molestiae
+                        error consectetur laboriosam maiores et natus odio
+                        quaerat adipisci accusamus?
+                    </p>
+                </div>
+            </div>
+            <div id="profs">
+                <h1>Nos profs</h1>
+                <img
+                    src="https://jtremblay.tim-cstj.ca/images/jt.png"
+                    alt="Jhonny"
+                />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Officiis, sed sapiente architecto, repellat nemo dolorum qui
+                    quasi, perspiciatis veritatis molestiae error consectetur
+                    laboriosam maiores et natus odio quaerat adipisci accusamus?
+                </p>
+            </div>
+            <div id="horaire">
+                <h1>L'horaire</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Officiis, sed sapiente architecto, repellat nemo dolorum qui
+                    quasi, perspiciatis veritatis molestiae error consectetur
+                    laboriosam maiores et natus odio quaerat adipisci accusamus?
+                </p>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

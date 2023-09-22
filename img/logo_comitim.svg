@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="2.2934 3.4512 495.4132 493.0976" width="495.4132" height="493.0976" xmlns="http://www.w3.org/2000/svg">
+  <circle class="cls-1" cx="250" cy="250" r="200" style="fill: rgb(25, 15, 41); stroke-width: 0; vector-effect: non-scaling-stroke;" transform="matrix(1.2385330200195312, 0, 0, 1.2327439785003662, -59.6332635228822, -58.185963544040355)"/>
+  <path class="cls-3" d="M 433.068 234.036 C 433.068 282.791 393.36 379.746 344.377 379.746 C 344.377 379.746 344.377 379.746 344.377 379.746 C 315.37 386.045 281.236 347.436 250 322.301 C 206.428 355.461 167.266 383.53 155.623 379.746 C 106.64 379.746 66.932 282.779 66.932 234.036 C 66.932 185.281 106.64 145.76 155.623 145.76 C 212.943 167.419 276.628 164.472 344.377 145.76 C 393.36 145.76 433.068 185.281 433.068 234.036 Z" style="fill: rgb(255, 255, 255); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <path class="cls-3" d="M 110.988 157.766 C 98.069 150.32 91.641 155.35 91.715 172.867 L 110.988 157.766 Z" style="fill: rgb(255, 255, 255); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <path class="cls-3" d="M 387.762 157.766 C 400.68 150.32 407.108 155.35 407.033 172.867 L 387.762 157.766 Z" style="fill: rgb(255, 255, 255); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <polygon class="cls-1" points="257.27 271.203 242.915 271.203 242.915 252.614 231.991 252.687 224.226 243.873 231.917 234.012 267.5 234.012 275.774 244.034 267.5 252.589 257.27 252.614 257.27 271.203" style="fill: rgb(25, 15, 41); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <circle class="cls-1" cx="335.45" cy="232.66" r="34" style="fill: rgb(25, 15, 41); stroke-width: 0; vector-effect: non-scaling-stroke;" transform="matrix(1.2385330200195312, 0, 0, 1.2327439785003662, -59.6332635228822, -58.185963544040355)"/>
+  <circle class="cls-1" cx="157.41" cy="232.69" r="19.65" style="fill: rgb(25, 15, 41); stroke-width: 0; vector-effect: non-scaling-stroke;" transform="matrix(1.2385330200195312, 0, 0, 1.2327439785003662, -59.6332635228822, -58.185963544040355)"/>
+  <circle class="cls-3" cx="157.41" cy="232.69" r="17.31" style="fill: rgb(255, 255, 255); stroke-width: 0; vector-effect: non-scaling-stroke;" transform="matrix(1.2385330200195312, 0, 0, 1.2327439785003662, -59.6332635228822, -58.185963544040355)"/>
+  <ellipse class="cls-3" cx="327.742" cy="228.624" rx="12.088" ry="11.884" style="fill: rgb(255, 255, 255); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <ellipse class="cls-2" cx="355.833" cy="200.887" rx="12.088" ry="11.884" style="fill: rgb(242, 162, 92); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <ellipse class="cls-2" cx="355.833" cy="256.016" rx="12.088" ry="11.884" style="fill: rgb(242, 162, 92); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+  <ellipse class="cls-3" cx="382.821" cy="228.624" rx="12.088" ry="11.884" style="fill: rgb(255, 255, 255); stroke-width: 0; vector-effect: non-scaling-stroke;"/>
+</svg>
