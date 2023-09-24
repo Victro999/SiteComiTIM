@@ -32,6 +32,15 @@ button {
     margin: 0;
 }
 
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    position: relative;
+}
+
 /*---------- Header ----------*/
 nav {
     padding: 0.5em;
@@ -48,7 +57,7 @@ nav {
         list-style: none;
 
         & button {
-            font-size: 2em;
+            font-size: 0.75em;
             color: #fff;
             text-decoration: none;
             transition: color 0.5s;
@@ -68,7 +77,8 @@ nav {
     }
 
     & img {
-        width: 90px;
+        width: 50px;
+        display: inline;
         align-self: center;
     }
 
@@ -76,6 +86,9 @@ nav {
         color: #fff;
         text-decoration: none;
         width: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         & p {
             font-size: 0.75em;
@@ -83,7 +96,7 @@ nav {
         }
 
         & img {
-            height: 50%;
+            height: 30%;
             filter: invert(100%) sepia(0%) saturate(24%) hue-rotate(67deg) brightness(104%) contrast(100%);
         }
     }
@@ -121,7 +134,11 @@ nav.secondary {
 
 /*---------- Main ----------*/
 h1 {
-    font-size: 10em;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 #main {
@@ -135,6 +152,7 @@ h1 {
     & > div {
         width: 100vw;
         overflow-y: scroll;
+        overflow-x: hidden;
         height: calc(100vh - 138px);
     }
 }
@@ -202,11 +220,193 @@ h1 {
     }
 }
 
+/* PORTRAIT TABLET */
+@media only screen and (min-width: 600px) {
 
+}
 
+/* LANDSCAPE TABLET */
+@media only screen and (min-width: 768px) {
+    
+}
 
+/* DESKTOP */
+@media only screen and (min-width: 992px) {
+    nav {
+        padding: 0.5em;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        
+        & ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+    
+            & button {
+                font-size: 2em;
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.5s;
+                background: none;
+                border: none;
+                padding: 0 0.5em;
+    
+                &:hover {
+                    color: var(--orange);
+                }
+    
+                &.currentPage {
+                    color: var(--orange);
+                    border-bottom: var(--orange) solid 2px;
+                }
+            }
+        }
+    
+        & img {
+            width: 90px;
+            align-self: center;
+        }
+    
+        & .discord {
+            color: #fff;
+            text-decoration: none;
+            width: 90px;
+    
+            & p {
+                font-size: 0.75em;
+                text-align: center;
+            }
+    
+            & img {
+                height: 50%;
+                filter: invert(100%) sepia(0%) saturate(24%) hue-rotate(67deg) brightness(104%) contrast(100%);
+            }
+        }
+    }
+    
+    nav.secondary {
+        height: 30px;
+        justify-content: center;
+        font-size: 0.75em;
+        z-index: 0;
+    
+        & ul {
+            opacity: 1;
+            transition: opacity 0.5s, top 1s;
+            position: absolute;
+            align-self: center;
+            top: 0px;
+        }
+    
+        & ul.hide {
+            opacity: 0;
+            transition: opacity 0.5s, top 1s;
+            top: -30px;
+        }
+    
+        & button:hover {
+            color: var(--darkblue);
+        }
+    
+        & button.currentContent {
+            color: var(--darkblue);
+            border-bottom: var(--darkblue) solid 2px;
+        }
+    }
+    
+    /*---------- Main ----------*/
+    h1 {
+        font-size: 10em;
+    }
 
+    p {
+        font-size: 5em;
+    }
+    
+    #main {
+        display: flex;
+        position: relative;
+        width: 500vw;
+        right: 0px;
+        transition: right 1s;
+        text-align: center;
+    
+        & > div {
+            width: 100vw;
+            overflow-y: scroll;
+            height: calc(100vh - 138px);
+        }
+    }
+    
+    /*---------- Models 3D ----------*/
+    .sketchfab-embed-wrapper {
+        
+        & iframe {
+            background-color: var(--orange);
+            padding: 0.5em;
+            border-radius: 1em;
+            width: 500px;
+            height: 400px;
+        }
+    }
+    
+    /*---------- Animations ----------*/
+    .anim {
+        background-color: var(--orange);
+        padding: 0.5em;
+        border-radius: 1em;
+    }
+    
+    /*---------- Jeux ----------*/
+    .jeu {
+        display: inline-block;
+        & h3 {
+            font-size: 3em;
+        }
+        & div {
+            position: relative;
+            justify-self: center;
+        }
+        & iframe {
+            position: relative;
+            width: 1280px;
+            height: 771px;
+            background-color: var(--orange);
+            padding: 3px 0.5em 3px 0.5em;
+            border-radius: 1em;
+        }
+        & button {
+            position: absolute;
+            display: grid;
+            left: 0;
+            top: 1px;
+            font-size: 2em;
+            border-radius: 0.5em 0 0.5em 0;
+            background-color: var(--orange);
+            width: 55px;
+            height: 55px;
+            border: 0.5em;
+            
+            & span {
+                font-size: 1.5em;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
 
-p {
-    font-size: 5em;
+/* LARGE DESKTOP */
+@media only screen and (min-width: 1200px) {
+    
 }

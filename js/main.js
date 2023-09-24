@@ -1,4 +1,23 @@
-scrollToTop();
+//---------- Common ----------//
+function isMobile(){
+    return navigator.userAgentData.mobile;
+}
+
+function screenWidth(){
+    return isMobile()? screen.width : window.innerWidth;
+}
+
+window.addEventListener("resize",debounce(function(e){
+    switchPage(currentPageID);
+}));
+
+function debounce(func){
+    var timer;
+    return function(event){
+      if(timer) clearTimeout(timer);
+      timer = setTimeout(func,100,event);
+    };
+}
 
 //---------- Float ----------//
 var floatingElements = document.getElementsByClassName("floating");
@@ -16,9 +35,11 @@ var main = document.getElementById("main");
 const navBtns = document.querySelectorAll("nav button");
 var listeProjets = document.getElementById("liste-projets");
 var listeActivites = document.getElementById("liste-activites");
+var currentPageID;
 function switchPage(ID)
 {
-    main.style.right = ID * window.innerWidth + "px";
+    currentPageID = ID;
+    main.style.right = ID * screenWidth() + "px";
     for (var i = 0; i < navBtns.length; i++)
     {
         if (i + 1 === ID) navBtns[i].classList.add("currentPage");
@@ -52,10 +73,6 @@ function switchContent(page, ID)
         if (i + 1 === ID) btns[i].classList.add("currentContent");
         else btns[i].classList.remove("currentContent");
     }
-}
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth', speed: 100 });
 }
 
 //---------- Games ----------//
