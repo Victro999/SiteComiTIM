@@ -22,7 +22,7 @@
         <button id="up-arrow" onclick="scrollToTop()" style="display: none">
             <span class="material-icons">arrow_upward</span>
         </button>
-        <header>
+        <header class="hide">
             <nav class="darkblue">
                 <img
                     src="img/logo_comitim.svg"
@@ -47,10 +47,6 @@
                         <button onclick="switchPage(4)">L'horaire</button>
                     </li>
                 </ul>
-                <a href="https://discord.gg/AEQnR9SSud" class="discord">
-                    <img src="img/discord.svg" alt="Discord" />
-                    <p>Rejoignez le Discord</p>
-                </a>
             </nav>
             <nav class="secondary orange">
                 <ul class="hide" id="liste-projets">
@@ -58,7 +54,7 @@
                         <button onclick="switchContent(0, 1)">3D</button>
                     </li>
                     <li>
-                        <button onclick="switchContent(0, 2)">Animation</button>
+                        <button onclick="switchContent(0, 2)">Animations</button>
                     </li>
                     <li>
                         <button onclick="switchContent(0, 3)">Jeux</button>
@@ -74,21 +70,47 @@
                         <button onclick="switchContent(1, 2)">GameJam</button>
                     </li>
                 </ul>
+                <button onclick="showHeader()" id="expand">
+                    <span class="material-icons">expand_more</span>
+                </button>
             </nav>
         </header>
         <div id="main">
             <div id="accueil">
                 <h1>Accueil</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Officiis, sed sapiente architecto, repellat nemo dolorum qui
-                    quasi, perspiciatis veritatis molestiae error consectetur
-                    laboriosam maiores et natus odio quaerat adipisci accusamus?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Iure autem quisquam id atque blanditiis! Explicabo, quis
-                    tempore numquam consequuntur molestias repudiandae fugit
-                    inventore alias possimus, eum quo repellendus harum cumque?
-                </p>
+                <div>
+                    <h2>Le mandat du ComiTIM</h2>
+                    <ul>
+                        <li>Socialiser</li>
+                        <li>Découvrir</li>
+                        <li>Apprendre</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>À propos du ComiTim</h2>
+                    <p>
+                        Ce comité a été créé en 2023 par Karim Dion Kelhalfa et
+                        Gabrielle Elemond-Beaudin. Leur motivation principale
+                        était...
+                    </p>
+                </div>
+                <div id="discord" class="darkblue">
+                    <p>Devenez de vrais débiles du TIM!</p>
+                    <a href="https://discord.gg/AEQnR9SSud">
+                        <img src="img/discord.svg" alt="Discord" />
+                        <p>Rejoignez le Discord!</p>
+                    </a>
+                </div>
+                <div>
+                    <h2>À propos de la page</h2>
+                    <p>
+                        Oui oui, il s'agit bien d'une seul page Web sur laquelle
+                        vous pouvez retrouver tout ce qu'il y a à savoir sur le
+                        ComiTIM et ses activités. Cette page est le résultat du
+                        travail de plusieurs membres du comité et évoluera année
+                        après année selon les besoins des étudiants.
+                    </p>
+                </div>
             </div>
             <div id="projets">
                 <div>
@@ -98,7 +120,16 @@
                         elit. Officiis, sed sapiente architecto, repellat nemo
                         dolorum qui quasi, perspiciatis veritatis molestiae
                         error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
+                        quaerat adipisci accusamus?Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Officiis, sed sapiente
+                        architecto, repellat nemo dolorum qui quasi,
+                        perspiciatis veritatis molestiae error consectetur
+                        laboriosam maiores et natus odio quaerat adipisci
+                        accusamus?Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Officiis, sed sapiente architecto,
+                        repellat nemo dolorum qui quasi, perspiciatis veritatis
+                        molestiae error consectetur laboriosam maiores et natus
+                        odio quaerat adipisci accusamus?
                     </p>
                 </div>
                 <div>
@@ -128,7 +159,7 @@
                     </div>
                 </div>
                 <div>
-                    <h1>Animation</h1>
+                    <h1>Animations</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Officiis, sed sapiente architecto, repellat nemo
@@ -136,7 +167,8 @@
                         error consectetur laboriosam maiores et natus odio
                         quaerat adipisci accusamus?
                     </p>
-                    <img src="animations/Mine.gif" alt="Mine" class="anim">
+                    <img src="animations/Mine.gif" alt="Mine" class="anim" />
+                    <img src="animations/Mine.gif" alt="Mine" class="anim" />
                 </div>
                 <div>
                     <h1>Jeux</h1>

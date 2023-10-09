@@ -75,12 +75,42 @@ function switchContent(page, ID)
     }
 }
 
+var headerHidden = true;
+var header = document.getElementsByTagName("header")[0];
+var expandBtn = document.querySelector("#expand span");
+function showHeader()
+{
+    headerHidden = !headerHidden;
+    if (headerHidden)
+    {
+        header.classList.add("hide");
+        expandBtn.innerHTML = "expand_more";
+    }
+    else
+    {
+        header.classList.remove("hide");
+        expandBtn.innerHTML = "expand_less";
+    }
+}
+
 //---------- Games ----------//
-var playing = false;
 function gameBtn(name)
 {
-    playing = !playing;
-    playing? loadGame(name) : unloadGame(name);
+    var iframe = document.querySelector(`#${name} iframe`);
+    var img = iframe.parentElement.getElementsByTagName("img")[0];
+    var span = document.querySelector(`#${name} span`);
+    if (span.innerHTML === "play_arrow")
+    {
+        iframe.src = `games/${name}/${name}.html`;
+        img.style.display = "none";
+        span.innerHTML = "pause";
+    }
+    else
+    {
+        iframe.src = "";
+        img.style.display = "block";
+        span.innerHTML = "play_arrow";
+    }
 }
 
 function loadGame(name)
