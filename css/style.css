@@ -2,40 +2,32 @@
     --darkblue: #180d28;
     --orange: #f3a35c;
 }
-
 * {
     padding: 0;
     margin: 0;
     font-family: "Kanit", sans-serif;
 }
-
 *::-webkit-scrollbar {
     display: none;
 }
-
 .white {
     background-color: #fff;
 }
-
 .darkblue {
     background-color: var(--darkblue);
 }
-
 .orange {
     background-color: var(--orange);
 }
-
 button {
     background: none;
     border: none;
     padding: 0;
     margin: 0;
 }
-
 html {
     overflow: hidden;
 }
-
 body {
     overflow: hidden;
     position: relative;
@@ -49,11 +41,9 @@ header {
     z-index: 10;
     top: 0;
     transition: top 0.5s;
-
     &.hide {
-        top: -218px;
+        top: -216px;
     }
-
     & nav {
         padding: 0.5em;
         height: 200px;
@@ -63,14 +53,12 @@ header {
         align-items: center;
         position: relative;
         z-index: 1;
-
         & ul {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
             list-style: none;
-
             & button {
                 font-size: 1.5em;
                 color: #fff;
@@ -79,31 +67,27 @@ header {
                 background: none;
                 border: none;
                 padding: 0 0.5em;
-
                 &:hover {
                     color: var(--orange);
                 }
-
                 &.currentPage {
                     color: var(--orange);
                     border-bottom: var(--orange) solid 2px;
                 }
             }
         }
-
         & img {
             width: 60px;
             display: inline;
             align-self: center;
         }
     }
-
     & nav.secondary {
-        height: 20px;
+        height: 32px;
         justify-content: center;
         font-size: 0.75em;
         z-index: 0;
-
+        padding: 0;
         & ul {
             flex-direction: row;
             opacity: 1;
@@ -112,23 +96,19 @@ header {
             align-self: center;
             top: 2px;
         }
-
         & ul.hide {
             opacity: 0;
             transition: opacity 0.5s, top 1s;
             top: -30px;
         }
-
         & button:hover {
             color: var(--darkblue);
         }
-
         & button.currentContent {
             color: var(--darkblue);
             border-bottom: var(--darkblue) solid 2px;
         }
     }
-
     & #expand {
         display: block;
         position: absolute;
@@ -142,13 +122,17 @@ header {
 
 /*---------- Main ----------*/
 h1 {
-    font-size: 2em;
+    font-size: 3em;
+    font-family: "DM Serif Display";
+    margin-bottom: 2rem;
 }
-
+h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
 p {
     font-size: 1.5em;
 }
-
 #main {
     display: flex;
     position: relative;
@@ -157,24 +141,31 @@ p {
     transition: right 1s;
     height: 100vh;
     text-align: center;
-
     & > div {
         margin-top: 30px;
         width: 100vw;
         overflow-y: scroll;
         overflow-x: hidden;
     }
-
     & #accueil {
         & > div {
             padding: 3em;
         }
+        & ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            & li {
+                font-size: 1.5em;
+                padding: 1em;
+            }
+        }
+        & #but {
+            color: #fff;
+            background-color: var(--darkblue);
+        }
         & #discord {
             color: #fff;
-            & > p {
-                margin-bottom: 1em;
-                font-size: 2em;
-            }
             & a {
                 text-decoration: none;
                 background-color: var(--orange);
@@ -187,14 +178,14 @@ p {
                 margin: 0 auto;
                 & img {
                     width: 30px;
-                    filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(14deg) brightness(103%) contrast(104%);
+                    filter: invert(88%) sepia(100%) saturate(0%)
+                        hue-rotate(14deg) brightness(103%) contrast(104%);
                     justify-self: center;
                 }
                 & p {
                     display: inline;
                     color: #fff;
                     font-size: 1em;
-                    font-weight: bold;
                 }
             }
         }
@@ -226,7 +217,6 @@ p {
 @media screen and (min-width: 600px) {
     header {
         position: static;
-
         & nav {
             padding: 0.5em;
             height: 80px;
@@ -234,13 +224,11 @@ p {
             flex-direction: row;
             position: relative;
             z-index: 1;
-
             & ul {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
-
                 & button {
                     font-size: 1.25em;
                     background: none;
@@ -248,27 +236,22 @@ p {
                     padding: 0 0.5em;
                 }
             }
-
             & img {
                 width: 90px;
                 align-self: center;
             }
         }
-
         & nav.secondary {
-            height: 30px;
+            height: 40px;
             font-size: 0.8em;
             z-index: 0;
-
             & ul {
                 top: 8px;
             }
-
             & ul.hide {
                 top: -30px;
             }
         }
-
         & #expand {
             display: none;
         }
@@ -278,11 +261,9 @@ p {
     h1 {
         font-size: 10em;
     }
-
     p {
         font-size: 1em;
     }
-
     #main {
         height: calc(100vh - 138px);
         & > div {
@@ -305,17 +286,18 @@ p {
     /*---------- Jeux ----------*/
     .jeu {
         display: inline-block;
-        
         & h3 {
             font-size: 3em;
         }
         & div {
             background-color: var(--orange);
+            padding: 0.75em;
+            border-radius: 1em;
             position: relative;
             & iframe {
                 position: relative;
-                width: 1280px;
-                height: 770px;
+                width: 640px;
+                height: 412px;
                 overflow: hidden;
             }
         }
@@ -323,14 +305,12 @@ p {
             position: absolute;
             display: grid;
             left: 0;
-            top: 4px;
+            top: 0;
             font-size: 2em;
-            border-radius: 0.5em 0 0.5em 0;
-            background-color: var(--orange);
-            width: 55px;
-            height: 55px;
-            border: 0.5em;
-
+            width: 50px;
+            height: 50px;
+            background-color: #f3a35c;
+            border-radius: 1rem 0 1rem 0;
             & span {
                 font-size: 1.5em;
                 align-self: center;
@@ -341,6 +321,7 @@ p {
             position: absolute;
             top: 50%;
             left: 50%;
+            width: 50%;
             transform: translate(-50%, -50%);
         }
     }
