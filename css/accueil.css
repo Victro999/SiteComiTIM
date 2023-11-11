@@ -1,0 +1,52 @@
+div {
+  padding: 3em;
+}
+
+#but {
+  color: #fff;
+  background-color: var(--blue1);
+}
+#but ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+#but ul li {
+  position: relative;
+  font-size: 1.5em;
+  padding: 1em;
+}
+#but ul li::before {
+  content: "> ";
+}
+
+#discord {
+  color: #fff;
+  background-color: var(--blue1);
+}
+#discord a {
+  text-decoration: none;
+  background-color: var(--orange1);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  margin: 0 auto;
+}
+#discord a img {
+  width: 30px;
+  filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(14deg) brightness(103%) contrast(104%);
+  justify-self: center;
+}
+#discord a p {
+  display: inline;
+  color: #fff;
+  font-size: 1em;
+}
+
+/* -------------------- PORTRAIT TABLET -------------------- */
+/* -------------------- LANDSCAPE TABLET -------------------- */
+/* -------------------- DESKTOP -------------------- */
+/* -------------------- LARGE DESKTOP -------------------- */

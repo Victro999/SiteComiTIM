@@ -31,7 +31,7 @@ setInterval(() => {
 }, 5);
 
 //---------- Navigation ----------//
-var main = document.getElementById("main");
+var main = document.getElementsByTagName("main")[0];
 const navBtns = document.querySelectorAll("nav button");
 var listeProjets = document.getElementById("liste-projets");
 var listeActivites = document.getElementById("liste-activites");

@@ -1,340 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kanit:wght@100;400;600&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 :root {
-    --darkblue: #180d28;
-    --orange: #f3a35c;
+  --orange0: #f2a25c;
+  --orange1: #dc9354;
+  --orange2: #c8864c;
+  --blue0: #190f29;
+  --blue1: #2e253c;
+  --blue2: #625b6d;
 }
+
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Kanit", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
 }
-*::-webkit-scrollbar {
-    display: none;
-}
-.white {
-    background-color: #fff;
-}
-.darkblue {
-    background-color: var(--darkblue);
-}
-.orange {
-    background-color: var(--orange);
-}
+
 button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
-html {
-    overflow: hidden;
-}
+
 body {
-    overflow: hidden;
-    position: relative;
-    background-color: #fff;
+  background-color: #fff;
 }
 
 /*---------- Header ----------*/
 header {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    top: 0;
-    transition: top 0.5s;
-    &.hide {
-        top: -216px;
-    }
-    & nav {
-        padding: 0.5em;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        & ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            list-style: none;
-            & button {
-                font-size: 1.5em;
-                color: #fff;
-                text-decoration: none;
-                transition: color 0.5s;
-                background: none;
-                border: none;
-                padding: 0 0.5em;
-                &:hover {
-                    color: var(--orange);
-                }
-                &.currentPage {
-                    color: var(--orange);
-                    border-bottom: var(--orange) solid 2px;
-                }
-            }
-        }
-        & img {
-            width: 60px;
-            display: inline;
-            align-self: center;
-        }
-    }
-    & nav.secondary {
-        height: 32px;
-        justify-content: center;
-        font-size: 0.75em;
-        z-index: 0;
-        padding: 0;
-        & ul {
-            flex-direction: row;
-            opacity: 1;
-            transition: opacity 0.5s, top 1s;
-            position: absolute;
-            align-self: center;
-            top: 2px;
-        }
-        & ul.hide {
-            opacity: 0;
-            transition: opacity 0.5s, top 1s;
-            top: -30px;
-        }
-        & button:hover {
-            color: var(--darkblue);
-        }
-        & button.currentContent {
-            color: var(--darkblue);
-            border-bottom: var(--darkblue) solid 2px;
-        }
-    }
-    & #expand {
-        display: block;
-        position: absolute;
-        right: 0;
-
-        & span {
-            font-size: 3em;
-        }
-    }
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  transition: top 0.5s;
+}
+header.hide {
+  top: -216px;
+}
+header nav {
+  background-color: var(--blue0);
+  padding: 0.5em;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+header nav ul a {
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+  background: none;
+  border: none;
+  padding: 0 0.5em;
+}
+header nav ul a:hover {
+  color: var(--orange0);
+}
+header nav ul a.currentPage {
+  color: var(--orange0);
+  border-bottom: var(--orange0) solid 2px;
+}
+header nav img {
+  width: 60px;
+  display: inline;
+  align-self: center;
+}
+header nav.secondary {
+  background-color: var(--orange0);
+  height: 32px;
+  justify-content: center;
+  font-size: 0.75em;
+  z-index: 0;
+  padding: 0;
+}
+header nav.secondary ul {
+  flex-direction: row;
+  opacity: 1;
+  transition: opacity 0.5s, top 1s;
+  position: absolute;
+  align-self: center;
+  top: 2px;
+}
+header nav.secondary ul.hide {
+  opacity: 0;
+  transition: opacity 0.5s, top 1s;
+  top: -30px;
+}
+header nav.secondary button:hover {
+  color: var(--blue0);
+}
+header nav.secondary button.currentContent {
+  color: var(--blue0);
+  border-bottom: var(--blue0) solid 2px;
+}
+header #expand {
+  display: block;
+  position: absolute;
+  right: 0;
+}
+header #expand span {
+  font-size: 3em;
 }
 
 /*---------- Main ----------*/
 h1 {
-    font-size: 3em;
-    font-family: "DM Serif Display";
-    margin-bottom: 2rem;
+  font-size: 3em;
+  font-family: "DM Serif Display";
+  margin-bottom: 2rem;
 }
+
 h2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
+  font-size: 2em;
+  margin-bottom: 1rem;
 }
+
 p {
-    font-size: 1.5em;
-}
-#main {
-    display: flex;
-    position: relative;
-    width: 500vw;
-    right: 0px;
-    transition: right 1s;
-    height: 100vh;
-    text-align: center;
-    & > div {
-        margin-top: 30px;
-        width: 100vw;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    & #accueil {
-        & > div {
-            padding: 3em;
-        }
-        & ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            & li {
-                font-size: 1.5em;
-                padding: 1em;
-            }
-        }
-        & #but {
-            color: #fff;
-            background-color: var(--darkblue);
-        }
-        & #discord {
-            color: #fff;
-            & a {
-                text-decoration: none;
-                background-color: var(--orange);
-                border-radius: 1em;
-                padding: 1em;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                width: 200px;
-                margin: 0 auto;
-                & img {
-                    width: 30px;
-                    filter: invert(88%) sepia(100%) saturate(0%)
-                        hue-rotate(14deg) brightness(103%) contrast(104%);
-                    justify-self: center;
-                }
-                & p {
-                    display: inline;
-                    color: #fff;
-                    font-size: 1em;
-                }
-            }
-        }
-    }
+  font-size: 1.5em;
 }
 
-/*---------- Models 3D ----------*/
-.sketchfab-embed-wrapper {
-    & iframe {
-        background-color: var(--orange);
-        border-radius: 1em;
-        width: 300px;
-        height: 300px;
-    }
-}
-
-/*---------- Animations ----------*/
-.anim {
-    border-radius: 1em;
-    width: 300px;
-}
-
-/*---------- Jeux ----------*/
-.jeu {
-    display: none;
+main {
+  text-align: center;
 }
 
 /* -------------------- PORTRAIT TABLET -------------------- */
 @media screen and (min-width: 600px) {
-    header {
-        position: static;
-        & nav {
-            padding: 0.5em;
-            height: 80px;
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            z-index: 1;
-            & ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                & button {
-                    font-size: 1.25em;
-                    background: none;
-                    border: none;
-                    padding: 0 0.5em;
-                }
-            }
-            & img {
-                width: 90px;
-                align-self: center;
-            }
-        }
-        & nav.secondary {
-            height: 40px;
-            font-size: 0.8em;
-            z-index: 0;
-            & ul {
-                top: 8px;
-            }
-            & ul.hide {
-                top: -30px;
-            }
-        }
-        & #expand {
-            display: none;
-        }
-    }
-
-    /*---------- Main ----------*/
-    h1 {
-        font-size: 10em;
-    }
-    p {
-        font-size: 1em;
-    }
-    #main {
-        height: calc(100vh - 138px);
-        & > div {
-            margin-top: 0;
-        }
-    }
-
-    /*---------- Models 3D ----------*/
-    .sketchfab-embed-wrapper {
-        & iframe {
-            width: 800px;
-            height: 600px;
-        }
-    }
-
-    /*---------- Animations ----------*/
-    .anim {
-    }
-
-    /*---------- Jeux ----------*/
-    .jeu {
-        display: inline-block;
-        & h3 {
-            font-size: 3em;
-        }
-        & div {
-            background-color: var(--orange);
-            padding: 0.75em;
-            border-radius: 1em;
-            position: relative;
-            & iframe {
-                position: relative;
-                width: 640px;
-                height: 412px;
-                overflow: hidden;
-            }
-        }
-        & button {
-            position: absolute;
-            display: grid;
-            left: 0;
-            top: 0;
-            font-size: 2em;
-            width: 50px;
-            height: 50px;
-            background-color: #f3a35c;
-            border-radius: 1rem 0 1rem 0;
-            & span {
-                font-size: 1.5em;
-                align-self: center;
-                justify-self: center;
-            }
-        }
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
+  h1 {
+    font-size: 4em;
+  }
+  p {
+    font-size: 1em;
+  }
+  header {
+    position: static;
+  }
+  header nav {
+    padding: 0.5em;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header nav ul button {
+    font-size: 1.25em;
+    background: none;
+    border: none;
+    padding: 0 0.5em;
+  }
+  header nav img {
+    width: 90px;
+    align-self: center;
+  }
+  header nav.secondary {
+    height: 40px;
+    font-size: 0.8em;
+    z-index: 0;
+  }
+  header nav.secondary ul {
+    top: 8px;
+  }
+  header nav.secondary ul.hide {
+    top: -30px;
+  }
+  header #expand {
+    display: none;
+  }
 }
-
 /* -------------------- LANDSCAPE TABLET -------------------- */
-@media screen and (min-width: 768px) {
-}
-
 /* -------------------- DESKTOP -------------------- */
-@media screen and (min-width: 992px) {
-}
-
 /* -------------------- LARGE DESKTOP -------------------- */
-@media screen and (min-width: 1200px) {
-}

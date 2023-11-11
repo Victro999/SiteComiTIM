@@ -1,0 +1,90 @@
+/*---------- Models 3D ----------*/
+.sketchfab-embed-wrapper {
+    iframe {
+        background-color: var(--orange0);
+        border-radius: 1em;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/*---------- Animations ----------*/
+.anim {
+    border-radius: 1em;
+    width: 300px;
+}
+
+/*---------- Jeux ----------*/
+.jeu {
+    display: none;
+}
+
+/* -------------------- PORTRAIT TABLET -------------------- */
+@media screen and (min-width: 600px) {
+    /*---------- Models 3D ----------*/
+    .sketchfab-embed-wrapper {
+        iframe {
+            width: 800px;
+            height: 600px;
+        }
+    }
+
+    /*---------- Animations ----------*/
+    .anim {
+    }
+
+    /*---------- Jeux ----------*/
+    .jeu {
+        display: inline-block;
+        h3 {
+            font-size: 3em;
+        }
+        div {
+            background-color: var(--orange0);
+            padding: 0.75em;
+            border-radius: 1em;
+            position: relative;
+            iframe {
+                position: relative;
+                width: 640px;
+                height: 412px;
+                overflow: hidden;
+            }
+        }
+        button {
+            position: absolute;
+            display: grid;
+            left: 0;
+            top: 0;
+            font-size: 2em;
+            width: 50px;
+            height: 50px;
+            background-color: #f3a35c;
+            border-radius: 1rem 0 1rem 0;
+            span {
+                font-size: 1.5em;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/* -------------------- LANDSCAPE TABLET -------------------- */
+@media screen and (min-width: 768px) {
+}
+
+/* -------------------- DESKTOP -------------------- */
+@media screen and (min-width: 992px) {
+}
+
+/* -------------------- LARGE DESKTOP -------------------- */
+@media screen and (min-width: 1200px) {
+}

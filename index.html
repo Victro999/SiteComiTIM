@@ -3,19 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kanit:wght@100;400;600&display=swap"
-            rel="stylesheet"
-        />
         <title>ComiTim</title>
         <link rel="icon" type="image/x-icon" href="img/logo_comitim.svg" />
+        
+        <!---------- Style ---------->
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/accueil.css" />
     </head>
 
     <body>
@@ -24,250 +17,59 @@
         </button>
         <header class="hide">
             <nav class="darkblue">
-                <img
-                    src="img/logo_comitim.svg"
-                    alt="Logo TIM"
-                    onclick="switchPage(0)"
-                />
                 <ul>
                     <li>
-                        <button onclick="switchPage(1), switchContent(0, 0)">
-                            Nos projets
-                        </button>
+                        <a href="index.html">
+                            <img src="img/logo_comitim.svg" alt="Logo TIM" />
+                        </a>
                     </li>
                     <li>
-                        <button onclick="switchPage(2), switchContent(1, 0)">
-                            Nos activités
-                        </button>
+                        <a href="projets.html"> Nos projets </a>
                     </li>
                     <li>
-                        <button onclick="switchPage(3)">Nos profs</button>
-                    </li>
-                    <li>
-                        <button onclick="switchPage(4)">L'horaire</button>
+                        <a href="profs.html">Nos profs</a>
                     </li>
                 </ul>
             </nav>
-            <nav class="secondary orange">
-                <ul class="hide" id="liste-projets">
-                    <li>
-                        <button onclick="switchContent(0, 1)">3D</button>
-                    </li>
-                    <li>
-                        <button onclick="switchContent(0, 2)">
-                            Animations
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="switchContent(0, 3)">Jeux</button>
-                    </li>
-                </ul>
-                <ul class="hide" id="liste-activites">
-                    <li>
-                        <button onclick="switchContent(1, 1)">
-                            MédiaTober
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="switchContent(1, 2)">GameJam</button>
-                    </li>
-                </ul>
-                <button onclick="showHeader()" id="expand">
-                    <span class="material-icons">expand_more</span>
-                </button>
-            </nav>
+            <nav class="secondary orange"></nav>
         </header>
-        <div id="main">
-            <div id="accueil">
-                <h1>Accueil</h1>
-                <div id="but">
-                    <h2>Le but du ComiTIM</h2>
-                    <ul>
-                        <li>Socialiser</li>
-                        <li>Découvrir</li>
-                        <li>Apprendre</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>À propos du ComiTim</h2>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Laborum itaque quo beatae maiores quasi, nemo
-                        cupiditate aliquam omnis voluptatibus, expedita cumque
-                        velit asperiores totam temporibus at repellendus
-                        voluptatum inventore illum?
-                    </p>
-                </div>
-                <div id="discord" class="darkblue">
-                    <h2>Devenez de vrais débiles du TIM!</h2>
-                    <a href="https://discord.gg/AEQnR9SSud">
-                        <img src="img/discord.svg" alt="Discord" />
-                        <p>Rejoignez le Discord!</p>
-                    </a>
-                </div>
-                <div>
-                    <h2>À propos de la page</h2>
-                    <p>
-                        Oui oui, il s'agit bien d'une seul page Web sur laquelle
-                        vous pouvez retrouver tout ce qu'il y a à savoir sur le
-                        ComiTIM et ses activités. Cette page est le résultat du
-                        travail de plusieurs membres du comité et évoluera année
-                        après année selon les besoins des étudiants.
-                    </p>
-                </div>
+        <main>
+            <h1>Accueil</h1>
+            <div id="but">
+                <h2>Le but du ComiTIM</h2>
+                <ul>
+                    <li>Socialiser</li>
+                    <li>Découvrir</li>
+                    <li>Apprendre</li>
+                </ul>
             </div>
-            <div id="projets">
-                <div>
-                    <h1>Nos projets</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Officiis, sed sapiente
-                        architecto, repellat nemo dolorum qui quasi,
-                        perspiciatis veritatis molestiae error consectetur
-                        laboriosam maiores et natus odio quaerat adipisci
-                        accusamus?Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Officiis, sed sapiente architecto,
-                        repellat nemo dolorum qui quasi, perspiciatis veritatis
-                        molestiae error consectetur laboriosam maiores et natus
-                        odio quaerat adipisci accusamus?
-                    </p>
-                </div>
-                <div>
-                    <h1>3D</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
-                    </p>
-                    <div class="sketchfab-embed-wrapper">
-                        <iframe
-                            title="Cube"
-                            frameborder="0"
-                            allowfullscreen
-                            mozallowfullscreen="true"
-                            webkitallowfullscreen="true"
-                            allow="autoplay; fullscreen; xr-spatial-tracking"
-                            xr-spatial-tracking
-                            execution-while-out-of-viewport
-                            execution-while-not-rendered
-                            web-share
-                            src="https://sketchfab.com/models/1ba8a8fa3e1f4f669fdf2c8ea96bef0f/embed"
-                        >
-                        </iframe>
-                    </div>
-                </div>
-                <div>
-                    <h1>Animations</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
-                    </p>
-                    <img src="animations/Mine.gif" alt="Mine" class="anim" />
-                    <img src="animations/Mine.gif" alt="Mine" class="anim" />
-                </div>
-                <div>
-                    <h1>Jeux</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
-                    </p>
-                    <div class="jeu">
-                        <h3>GameJam</h3>
-                        <div id="CommunityBalls">
-                            <iframe src="" frameborder="0"></iframe>
-                            <button onclick="gameBtn('CommunityBalls')">
-                                <span class="material-icons">play_arrow</span>
-                            </button>
-                            <img
-                                src="img/test.png"
-                                alt=""
-                                onclick="gameBtn('CommunityBalls')"
-                            />
-                        </div>
-                    </div>
-                    <div class="jeu">
-                        <h3>Alex Guilbault</h3>
-                        <div id="MauvaiseNote">
-                            <iframe src="" frameborder="0"></iframe>
-                            <button onclick="gameBtn('MauvaiseNote')">
-                                <span class="material-icons">play_arrow</span>
-                            </button>
-                            <img
-                                src="img/test.png"
-                                alt=""
-                                onclick="gameBtn('MauvaiseNote')"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="activites">
-                <div>
-                    <h1>Nos activités</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
-                    </p>
-                </div>
-                <div>
-                    <h1>MédiaTober</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
-                    </p>
-                </div>
-                <div>
-                    <h1>GameJam</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis, sed sapiente architecto, repellat nemo
-                        dolorum qui quasi, perspiciatis veritatis molestiae
-                        error consectetur laboriosam maiores et natus odio
-                        quaerat adipisci accusamus?
-                    </p>
-                </div>
-            </div>
-            <div id="profs">
-                <h1>Nos profs</h1>
-                <img
-                    src="https://jtremblay.tim-cstj.ca/images/jt.png"
-                    alt="Jhonny"
-                />
+            <div>
+                <h2>À propos du ComiTim</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Officiis, sed sapiente architecto, repellat nemo dolorum qui
-                    quasi, perspiciatis veritatis molestiae error consectetur
-                    laboriosam maiores et natus odio quaerat adipisci accusamus?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Laborum itaque quo beatae maiores quasi, nemo cupiditate
+                    aliquam omnis voluptatibus, expedita cumque velit asperiores
+                    totam temporibus at repellendus voluptatum inventore illum?
                 </p>
             </div>
-            <div id="horaire">
-                <h1>L'horaire</h1>
+            <div id="discord">
+                <h2>Devenez de vrais débiles du TIM!</h2>
+                <a href="https://discord.gg/AEQnR9SSud">
+                    <img src="img/discord.svg" alt="Discord" />
+                    <p>Rejoignez le Discord!</p>
+                </a>
+            </div>
+            <div>
+                <h2>À propos de la page</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Officiis, sed sapiente architecto, repellat nemo dolorum qui
-                    quasi, perspiciatis veritatis molestiae error consectetur
-                    laboriosam maiores et natus odio quaerat adipisci accusamus?
+                    Oui oui, il s'agit bien d'une seul page Web sur laquelle
+                    vous pouvez retrouver tout ce qu'il y a à savoir sur le
+                    ComiTIM et ses activités. Cette page est le résultat du
+                    travail de plusieurs membres du comité et évoluera année
+                    après année selon les besoins des étudiants.
                 </p>
             </div>
-        </div>
+        </main>
 
         <script src="js/main.js"></script>
     </body>
