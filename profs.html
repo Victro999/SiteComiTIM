@@ -11,19 +11,20 @@
         <link rel="stylesheet" href="css/profs.css" />
     </head>
     <body>
+        <div id="transition"></div>
         <header class="hide">
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <button onclick="changePage(`index.html`)">
                             <img src="img/logo_comitim.svg" alt="Logo TIM" />
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a href="projets.html"> Nos projets </a>
+                        <button onclick="changePage(`projets.html`)"> Nos projets </button>
                     </li>
                     <li>
-                        <a class="currentPage" href="profs.html">Nos profs</a>
+                        <button onclick="changePage(`profs.html`)">Nos profs</button>
                     </li>
                 </ul>
             </nav>

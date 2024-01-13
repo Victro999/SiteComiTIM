@@ -1,4 +1,3 @@
-//---------- Common ----------//
 function isMobile(){
     return navigator.userAgentData.mobile;
 }
@@ -7,16 +6,26 @@ function screenWidth(){
     return isMobile()? screen.width : window.innerWidth;
 }
 
-//---------- Float ----------//
-var floatingElements = document.getElementsByClassName("floating");
-var floatingTimer = 0;
-setInterval(() => {
-    floatingTimer++;
-    for (var i = 0; i < floatingElements.length; i++)
-    {
-        floatingElements[i].style.transform = `translate(-50%, ${-(50 + Math.sin(floatingTimer * 0.02))}%)`;
-    }
-}, 5);
+//---------- Transitions ----------//
+var speed = 0.5;
+window.addEventListener("load", e => {
+    var body = document.body;
+    var height = body.scrollHeight > window.innerHeight? body.scrollHeight : window.innerHeight;
+    var radius = Math.sqrt(Math.pow(height, 2) + Math.pow(window.innerWidth / 2, 2));
+    body.style.transitionDuration = `${radius * speed}ms`
+    body.style.clipPath = `ellipse(${radius}px ${radius}px at 50% 0)`;
+})
+
+function changePage(href) {
+    var transition = document.getElementById("transition");
+    var height = window.innerHeight;
+    var radius = Math.sqrt(Math.pow(height, 2) + Math.pow(window.innerWidth / 2, 2));
+    transition.style.transitionDuration = `${radius * speed}ms`
+    transition.style.clipPath = `ellipse(${radius}px ${radius}px at 50% 0)`;
+    transition.addEventListener("transitionend", e => {
+        window.location = href;
+    })
+}
 
 //---------- Navigation ----------//
 var contentProjets = document.querySelectorAll("#projets > div");
@@ -47,16 +56,8 @@ var expandBtn = document.querySelector("#expand span");
 function showHeader()
 {
     headerHidden = !headerHidden;
-    if (headerHidden)
-    {
-        header.classList.add("hide");
-        expandBtn.innerHTML = "expand_more";
-    }
-    else
-    {
-        header.classList.remove("hide");
-        expandBtn.innerHTML = "expand_less";
-    }
+    headerHidden? header.classList.add("hide") : header.classList.remove("hide");
+    expandBtn.innerHTML = headerHidden? "expand_more" : "expand_less";
 }
 
 //---------- Games ----------//

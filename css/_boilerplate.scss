@@ -2,6 +2,18 @@
     padding: 0;
     margin: 0;
     font-family: "Kanit", sans-serif;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: var(--blue);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--orange);
+        border-radius: 1em;
+    }
 }
 button {
     background: none;

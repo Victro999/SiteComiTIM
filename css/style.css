@@ -5,6 +5,16 @@
   margin: 0;
   font-family: "Kanit", sans-serif;
 }
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--blue);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 1em;
+}
 
 button {
   background: none;
@@ -27,37 +37,56 @@ ul {
   --blue: #190f29;
 }
 
-h1 {
+body {
+  background-color: var(--orange);
+  transition: -webkit-clip-path 1s ease-in;
+  transition: clip-path 1s ease-in;
+  transition: clip-path 1s ease-in, -webkit-clip-path 1s ease-in;
+  -webkit-clip-path: ellipse(0 0 at 50% 0);
+          clip-path: ellipse(0 0 at 50% 0);
+}
+body #transition {
+  background-color: var(--orange);
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: -webkit-clip-path 1s ease-out;
+  transition: clip-path 1s ease-out;
+  transition: clip-path 1s ease-out, -webkit-clip-path 1s ease-out;
+  -webkit-clip-path: ellipse(0 0 at 50% 0);
+          clip-path: ellipse(0 0 at 50% 0);
+}
+body h1 {
   font-size: 3em;
   font-family: "DM Serif Display";
   margin-bottom: 2rem;
 }
-
-h2 {
+body h2 {
   font-size: 2em;
   margin-bottom: 1rem;
 }
-
-p {
+body p {
   font-size: 1.5em;
 }
-
-main {
+body main {
+  background-color: #fff;
   text-align: center;
   margin-top: 32px;
 }
-
-header {
+body header {
   position: fixed;
   width: 100%;
   z-index: 10;
   top: 0;
   transition: top 0.5s;
 }
-header.hide {
+body header.hide {
   top: -216px;
 }
-header nav {
+body header nav {
   background-color: var(--blue);
   padding: 0.5em;
   height: 200px;
@@ -67,29 +96,30 @@ header nav {
   align-items: center;
   position: relative;
 }
-header nav ul {
+body header nav ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 1em;
 }
-header nav ul a {
+body header nav ul button {
+  color: #fff;
   display: flex;
   font-size: 1.5em;
   transition: color 0.5s;
 }
-header nav ul a:hover {
+body header nav ul button:hover {
   color: var(--orange);
 }
-header nav ul a.currentPage {
+body header nav ul button.currentPage {
   color: var(--orange);
   border-bottom: var(--orange) solid 2px;
 }
-header nav ul a img {
+body header nav ul button img {
   height: 60px;
 }
-header nav.secondary {
+body header nav.secondary {
   background-color: var(--orange);
   height: 32px;
   justify-content: center;
@@ -97,7 +127,7 @@ header nav.secondary {
   z-index: 0;
   padding: 0;
 }
-header nav.secondary ul {
+body header nav.secondary ul {
   flex-direction: row;
   opacity: 1;
   transition: opacity 0.5s, top 1s;
@@ -105,47 +135,47 @@ header nav.secondary ul {
   align-self: center;
   top: 2px;
 }
-header nav.secondary ul.hide {
+body header nav.secondary ul.hide {
   opacity: 0;
   transition: opacity 0.5s, top 1s;
   top: -30px;
 }
-header nav.secondary ul button {
+body header nav.secondary ul button {
   color: #fff;
   font-size: 1.5em;
   transition: color 0.5s;
 }
-header nav.secondary ul button:hover {
+body header nav.secondary ul button:hover {
   color: var(--blue);
 }
-header nav.secondary ul button.currentContent {
+body header nav.secondary ul button.currentContent {
   color: var(--blue);
   border-bottom: var(--blue) solid 2px;
 }
-header nav.secondary #expand {
+body header nav.secondary #expand {
   display: block;
   position: absolute;
   right: 0;
 }
-header nav.secondary #expand span {
+body header nav.secondary #expand span {
   font-size: 3em;
 }
 
 /* -------------------- PORTRAIT TABLET -------------------- */
 @media screen and (min-width: 600px) {
-  h1 {
+  body h1 {
     font-size: 4em;
   }
-  p {
+  body p {
     font-size: 1em;
   }
-  main {
+  body main {
     margin-top: 0;
   }
-  header {
+  body header {
     position: static;
   }
-  header nav {
+  body header nav {
     padding: 0.5em;
     height: 60px;
     display: flex;
@@ -153,26 +183,26 @@ header nav.secondary #expand span {
     position: relative;
     z-index: 1;
   }
-  header nav ul {
+  body header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  header nav ul img {
+  body header nav ul img {
     height: 60px;
     align-self: center;
   }
-  header nav.secondary ul {
+  body header nav.secondary ul {
     top: 2px;
   }
-  header nav.secondary ul li button {
+  body header nav.secondary ul li button {
     font-size: 1.5em;
   }
-  header nav.secondary ul.hide {
+  body header nav.secondary ul.hide {
     top: -30px;
   }
-  header nav.secondary #expand {
+  body header nav.secondary #expand {
     display: none;
   }
 }
