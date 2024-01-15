@@ -26,19 +26,21 @@ body {
     h1 {
         font-size: 3em;
         font-family: "DM Serif Display";
-        margin-bottom: 2rem;
     }
     h2 {
         font-size: 2em;
-        margin-bottom: 1rem;
     }
     p {
         font-size: 1.5em;
+        margin: 0 auto;
+        width: 50vw;
+        padding: 1rem;
     }
     main {
         background-color: #fff;
         text-align: center;
         margin-top: 32px;
+        height: 100vh;
     }
     header {
         position: fixed;

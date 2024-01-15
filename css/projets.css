@@ -21,10 +21,13 @@
 @media screen and (min-width: 600px) {
   /*---------- Models 3D ----------*/
   .sketchfab-embed-wrapper iframe {
-    width: 800px;
-    height: 600px;
+    width: 640px;
+    height: 360px;
   }
   /*---------- Animations ----------*/
+  .anim {
+    width: 640px;
+  }
   /*---------- Jeux ----------*/
   .jeu {
     display: inline-block;
@@ -33,39 +36,33 @@
     font-size: 3em;
   }
   .jeu div {
-    background-color: var(--orange0);
-    padding: 0.75em;
+    background-color: var(--orange);
     border-radius: 1em;
     position: relative;
-  }
-  .jeu div iframe {
-    position: relative;
     width: 640px;
-    height: 412px;
+    height: 360px;
     overflow: hidden;
   }
+  .jeu div iframe {
+    width: 100%;
+    height: 100%;
+  }
   .jeu button {
+    cursor: pointer;
     position: absolute;
-    display: grid;
-    left: 0;
-    top: 0;
-    font-size: 2em;
-    width: 50px;
-    height: 50px;
-    background-color: #f3a35c;
-    border-radius: 1rem 0 1rem 0;
+    color: #fff;
+    background-color: var(--blue);
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
   }
   .jeu button span {
-    font-size: 1.5em;
+    font-size: 6em;
     align-self: center;
     justify-self: center;
-  }
-  .jeu img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 /* -------------------- LANDSCAPE TABLET -------------------- */

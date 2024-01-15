@@ -3,6 +3,9 @@ div {
     &#discord {
         color: #fff;
         background-color: var(--blue);
+        h2 {
+            margin-bottom: 1rem;
+        }
         a {
             text-decoration: none;
             background-color: var(--orange);
@@ -23,6 +26,7 @@ div {
                 display: inline;
                 color: #fff;
                 font-size: 1em;
+                padding: 0;
             }
         }
     }

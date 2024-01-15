@@ -1,0 +1,14 @@
+#unity-container {
+  width: 640px;
+  height: 360px;
+  overflow: hidden;
+}
+#unity-container #unity-webgl-logo, #unity-container #unity-build-title {
+  display: none;
+}
+#unity-container #unity-fullscreen-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  border-radius: 1em 0 0 0;
+}

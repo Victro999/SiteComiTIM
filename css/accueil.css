@@ -5,6 +5,9 @@ div#discord {
   color: #fff;
   background-color: var(--blue);
 }
+div#discord h2 {
+  margin-bottom: 1rem;
+}
 div#discord a {
   text-decoration: none;
   background-color: var(--orange);
@@ -25,6 +28,7 @@ div#discord a p {
   display: inline;
   color: #fff;
   font-size: 1em;
+  padding: 0;
 }
 
 /* -------------------- PORTRAIT TABLET -------------------- */
