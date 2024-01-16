@@ -1,3 +1,10 @@
+main > div {
+  transition: transform 1s;
+  transform: translateX(100%);
+  position: absolute;
+  width: 100%;
+}
+
 /*---------- Models 3D ----------*/
 .sketchfab-embed-wrapper iframe {
   background-color: var(--orange);
@@ -48,21 +55,38 @@
     height: 100%;
   }
   .jeu button {
+    z-index: 1;
     cursor: pointer;
     position: absolute;
     color: #fff;
     background-color: var(--blue);
     left: 50%;
     top: 50%;
+    transition: width 0.2s, height 0.2s;
     width: 100px;
     height: 100px;
     transform: translate(-50%, -50%);
     border-radius: 100%;
   }
+  .jeu button:hover {
+    transition: width 0.2s, height 0.2s;
+    width: 110px;
+    height: 110px;
+  }
+  .jeu button:hover span {
+    transition: font-size 0.2s;
+    font-size: 7em;
+  }
   .jeu button span {
+    transition: font-size 0.2s;
     font-size: 6em;
     align-self: center;
     justify-self: center;
+  }
+  .jeu img {
+    position: absolute;
+    width: 100%;
+    left: 0;
   }
 }
 /* -------------------- LANDSCAPE TABLET -------------------- */

@@ -20,7 +20,7 @@ div#discord a {
   margin: 0 auto;
 }
 div#discord a img {
-  width: 30px;
+  width: 50px;
   filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(14deg) brightness(103%) contrast(104%);
   justify-self: center;
 }
@@ -29,6 +29,8 @@ div#discord a p {
   color: #fff;
   font-size: 1em;
   padding: 0;
+  width: 100%;
+  text-align: end;
 }
 
 /* -------------------- PORTRAIT TABLET -------------------- */
