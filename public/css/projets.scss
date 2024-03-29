@@ -1,0 +1,151 @@
+/*---------- Models 3D ----------*/
+.sketchfab-embed-wrapper {
+    iframe {
+        background-color: var(--orange);
+        border-radius: 1em;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/*---------- Animations ----------*/
+.anim {
+    border-radius: 1em;
+    width: 300px;
+}
+
+/*---------- Jeux ----------*/
+.jeu {
+    display: none;
+}
+
+/* -------------------- PORTRAIT TABLET -------------------- */
+@media screen and (min-width: 600px) {
+    /*---------- Models 3D ----------*/
+    .sketchfab-embed-wrapper {
+        iframe {
+            width: 640px;
+            height: 360px;
+        }
+    }
+
+    /*---------- Animations ----------*/
+    .anim {
+        width: 640px;
+    }
+
+    /*---------- Jeux ----------*/
+    .jeux {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding: 3em;
+        .jeu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            h3 {
+                font-size: 3em;
+            }
+            div.infos {
+                width: 45vw;
+                text-align: left;
+                p {
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    &.createur {
+                        font-size: 1.5em;
+                        font-weight: bold;
+                        margin-bottom: 1em;
+                        color: gray;
+                    }
+                }
+            }
+            div.frame {
+                background-color: var(--orange);
+                border-radius: 1em;
+                position: relative;
+                overflow: hidden;
+                width: 45vw;
+                aspect-ratio: 16/9;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                &.fullscreen {
+                    width: 100vw;
+                    height: 100vh;
+                    position: absolute;
+                }
+                iframe {
+                    border-radius: 1em;
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                }
+                img {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    left: 0;
+                }
+                button {
+                    &.fullscreen {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background-color: var(--blue);
+                        font-size: 2em;
+                        color: #fff;
+                        aspect-ratio: 1;
+                        width: 48px;
+                        border-radius: 1rem 0 0 0;
+                    }
+                    &.play {
+                        z-index: 1;
+                        cursor: pointer;
+                        position: absolute;
+                        color: #fff;
+                        background-color: var(--blue);
+                        left: 50%;
+                        top: 50%;
+                        transition: width 0.2s, height 0.2s;
+                        width: 100px;
+                        height: 100px;
+                        transform: translate(-50%, -50%);
+                        border-radius: 100%;
+                        &:hover {
+                            transition: width 0.2s, height 0.2s;
+                            width: 110px;
+                            height: 110px;
+                            span {
+                                transition: font-size 0.2s;
+                                font-size: 7em;
+                            }
+                        }
+                        span {
+                            transition: font-size 0.2s;
+                            font-size: 6em;
+                            align-self: center;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -------------------- LANDSCAPE TABLET -------------------- */
+@media screen and (min-width: 768px) {
+}
+
+/* -------------------- DESKTOP -------------------- */
+@media screen and (min-width: 992px) {
+}
+
+/* -------------------- LARGE DESKTOP -------------------- */
+@media screen and (min-width: 1200px) {
+}

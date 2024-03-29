@@ -1,0 +1,10 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  border-radius: 1em;
+}
+form a {
+  color: black;
+}

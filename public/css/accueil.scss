@@ -1,0 +1,69 @@
+div {
+    padding: 3em;
+    padding-top: 0;
+    &#fondateurs {
+        & > div {
+            display: flex;
+            justify-content: center;
+            img {
+                aspect-ratio: 1;
+                width: 150px;
+            }
+            p {
+                width: 30vw;
+            }
+        }
+    }
+    &#discord {
+        padding-top: 3em;
+        color: #fff;
+        background-color: var(--blue);
+        h2 {
+            margin-bottom: 1rem;
+        }
+        a {
+            text-decoration: none;
+            background-color: var(--orange);
+            border-radius: 1em;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 200px;
+            margin: 0 auto;
+            &:hover {
+                background-color: var(--lightorange);
+            }
+            img {
+                width: 50px;
+                filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(14deg)
+                    brightness(103%) contrast(104%);
+                justify-self: center;
+            }
+            p {
+                display: inline;
+                color: #fff;
+                font-size: 1em;
+                padding: 0;
+                width: 100%;
+                text-align: end;
+            }
+        }
+    }
+}
+
+/* -------------------- PORTRAIT TABLET -------------------- */
+@media screen and (min-width: 600px) {
+}
+
+/* -------------------- LANDSCAPE TABLET -------------------- */
+@media screen and (min-width: 768px) {
+}
+
+/* -------------------- DESKTOP -------------------- */
+@media screen and (min-width: 992px) {
+}
+
+/* -------------------- LARGE DESKTOP -------------------- */
+@media screen and (min-width: 1200px) {
+}
