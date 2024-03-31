@@ -25,6 +25,9 @@
                     <button onclick="changePage(`3d`)">3D</button>
                 </li>
                 <li>
+                    <button onclick="changePage(`infographies`)">Infographies</button>
+                </li>
+                <li>
                     <button onclick="changePage(`animations`)">
                         Animations
                     </button>

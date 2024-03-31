@@ -25,6 +25,9 @@
                     <button onclick="changePage(`3d`)">3D</button>
                 </li>
                 <li>
+                    <button onclick="changePage(`infographies`)">Infographies</button>
+                </li>
+                <li>
                     <button class="currentPage" onclick="changePage(`animations`)">
                         Animations
                     </button>
@@ -43,7 +46,6 @@
             quasi, perspiciatis veritatis molestiae error consectetur
             laboriosam maiores et natus odio quaerat adipisci accusamus?
         </p>
-        <img src="database/animations/Mine.gif" alt="Mine" class="anim" />
     </main>
 
     <script src="js/main.js"></script>

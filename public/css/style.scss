@@ -13,6 +13,9 @@ body {
     background-color: var(--lightorange);
     transition: clip-path 1s ease-in;
     clip-path: ellipse(0 0 at 50% 0);
+    &.compte main{
+        min-height: 100vh;
+    }
     &.no-scroll {
         overflow: hidden;
     }

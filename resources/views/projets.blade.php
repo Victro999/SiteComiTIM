@@ -25,6 +25,9 @@
                     <button onclick="changePage(`3d`)">3D</button>
                 </li>
                 <li>
+                    <button onclick="changePage(`infographies`)">Infographies</button>
+                </li>
+                <li>
                     <button onclick="changePage(`animations`)">
                         Animations
                     </button>
@@ -36,7 +39,7 @@
         </nav>
     </header>
     <main>
-        <h1>Nos projets</h1>
+        <h1>Projets</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Officiis, sed sapiente architecto, repellat nemo dolorum qui

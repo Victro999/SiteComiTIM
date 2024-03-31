@@ -46,6 +46,9 @@ body {
   -webkit-clip-path: ellipse(0 0 at 50% 0);
           clip-path: ellipse(0 0 at 50% 0);
 }
+body.compte main {
+  min-height: 100vh;
+}
 body.no-scroll {
   overflow: hidden;
 }

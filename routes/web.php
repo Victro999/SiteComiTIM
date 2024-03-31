@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//---------- Accueil ----------//
 Route::get('/', function () {
     return view('index');
 });
@@ -21,12 +22,9 @@ Route::get('/accueil', function () {
     return view('index');
 });
 
+//---------- Projets ----------//
 Route::get('/projets', function () {
     return view('projets');
-});
-
-Route::get('/profs', function () {
-    return view('profs');
 });
 
 Route::get('/jeux', function () {
@@ -37,10 +35,25 @@ Route::get('/3d', function () {
     return view('/projets/troisd');
 });
 
+Route::get('/infographies', function () {
+    return view('/projets/info');
+});
+
 Route::get('/animations', function () {
     return view('/projets/anim');
 });
 
+//---------- Nouvelles ----------//
+Route::get('/nouvelles', function () {
+    return view('/nouvelles');
+});
+
+//---------- Profs ----------//
+Route::get('/profs', function () {
+    return view('profs');
+});
+
+//---------- Compte ----------//
 Route::get('/connexion', function () {
     return view('/compte/connexion');
 });
