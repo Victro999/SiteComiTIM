@@ -48,60 +48,25 @@
         </p>
         <div class="jeux">
             <div class="jeu">
-                <div id="CommunityBalls" class="frame">
-                    <iframe src="" game-src="http://localhost:1230" frameborder="0"></iframe>
-                    <button onclick="startGame('CommunityBalls')">
-                        <span class="material-icons">play_arrow</span>
-                    </button>
-                    <img src="img/test.png">
-                </div>
-                <div class="infos">
-                    <h3>GameJam H23</h3>
-                    <p class="createur">Bob Tanguay</p>
-                    <p class="descrition">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Commodi vitae dolorem voluptate. Voluptates dolorem quam similique animi cumque.
-                        Sit qui, autem vitae perferendis quae sequi dignissimos fugit omnis eius nam.
-                    </p>
-                </div>
-            </div>
-            <div class="jeu">
-                <div id="Test2" class="frame">
+                <div id="TinyCrate" class="frame">
                     <iframe src="" game-src="https://html-classic.itch.zone/html/4833805-935406/index.html" frameborder="0"></iframe>
-                    <button class="play" onclick="startGame('Test2')">
+                    <button class="play" onclick="startGame('TinyCrate')">
                         <span class="material-icons">play_arrow</span>
                     </button>
-                    <button class="fullscreen">
+                    <button class="fullscreen" onclick="fullscreen('TinyCrate')">
                         <span class="material-icons">
                             open_in_full
                         </span></button>
-                    <img src="img/test.png">
+                    <img src="https://img.itch.zone/aW1hZ2UvMTE5MjM0OS83MDcwMzQxLmdpZg==/347x500/pYy66y.gif">
                 </div>
                 <div class="infos">
                     <h3>Tiny Crate</h3>
-                    <p class="createur">Bob Tanguay</p>
-                    <p class="descrition">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Commodi vitae dolorem voluptate. Voluptates dolorem quam similique animi cumque.
-                        Sit qui, autem vitae perferendis quae sequi dignissimos fugit omnis eius nam.
-                    </p>
-                </div>
-            </div>
-            <div class="jeu">
-                <div id="Test3" class="frame">
-                    <iframe src="" game-src="https://html-classic.itch.zone/html/6227603/index.html" frameborder="0"></iframe>
-                    <button onclick="startGame('Test3')">
-                        <span class="material-icons">play_arrow</span>
-                    </button>
-                    <img src="img/test.png">
-                </div>
-                <div class="infos">
-                    <h3>Exhibit of Sorrows</h3>
-                    <p class="createur">Bob Tanguay</p>
-                    <p class="descrition">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Commodi vitae dolorem voluptate. Voluptates dolorem quam similique animi cumque.
-                        Sit qui, autem vitae perferendis quae sequi dignissimos fugit omnis eius nam.
+                    <p class="createur">Harmony Honey</p>
+                    <p class="description">
+                        Tiny Crate is a cute little precision platformer with puzzle elements!
+                        Lift and toss crates to traverse over spike pits and reach higher ground!
+                        Weigh down buttons to create platforms and solve the puzzle!
+                        Push yourself and make tight jumps! You got this!
                     </p>
                 </div>
             </div>

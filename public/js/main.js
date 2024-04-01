@@ -59,3 +59,14 @@ function startGame(gameID) {
     var button = div.querySelector(`button`);
     button.style.display = "none";
 }
+function fullscreen(gameID) {
+    var div = document.querySelector(`#${gameID}`);
+    if (div.classList.contains("fullscreen")) div.classList.remove("fullscreen");
+    else 
+    {
+        div.classList.add("fullscreen");
+        window.addEventListener("keydown", e => {
+            if (e.key = "esc") div.classList.remove("fullscreen");
+        }, {once: true})
+    }
+}
